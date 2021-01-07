@@ -1,0 +1,47 @@
+package Core;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Method {
+	
+	static WebDriver driver;
+	
+	public Method() {
+		driver = SetUp.GetDriver();
+	}
+	
+	public static WebElement waitElementToBePresent(By locator) {
+		WebElement Element= (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(locator));
+		return (WebElement) Element;
+	}
+	
+	public static WebElement waitElementToBeClickable(By locator) {
+		WebElement Element = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(locator));
+		return (WebElement) Element;
+	}
+	
+	public static void clickElement(By locator) {
+		waitElementToBeClickable(locator).click();
+	}
+	
+	public static void sendText(By locator, String Text) {
+		waitElementToBeClickable(locator).sendKeys(Text);
+	}
+	
+	public static void elementIsDisplaying(By locator) {
+		waitElementToBePresent(locator);
+	}
+	
+	public static void clearText(By locator) {
+		waitElementToBeClickable(locator).clear();
+	}
+	
+	public static  String getText(By locator) {
+		return waitElementToBePresent(locator).getText();
+	}
+
+}

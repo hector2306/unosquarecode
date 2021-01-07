@@ -1,0 +1,42 @@
+package Tests;
+
+import org.testng.annotations.Test;
+
+import Core.SetUp;
+import pages.Login;
+
+public class LoginTests extends SetUp {
+	
+	
+	@Test
+	public void LoginSuccesfull()  {
+		Login login= new Login();   //Instance of login
+		login.enterUsername( "standard_user");
+		login.enterPassword("secret_sauce");
+		login.clickLoginButton();
+		login.VerifyProdutPage();
+		
+	}
+	@Test
+	public void LoginErrror()  {
+		Login login= new Login();   //Instance of login
+		login.enterUsername( "Invalid_User");
+		login.enterPassword("Password");
+		login.clickLoginButton();
+		login.VerifyErrorMessage();
+		
+	}
+	
+	@Test
+	public void LogOutSuccesfull()  {
+		Login login= new Login();   //Instance of login
+		login.enterUsername( "standard_user");
+		login.enterPassword("secret_sauce");
+		login.clickLoginButton();
+		login.ClickBurgerMenu();
+		login.ClickLogOut();
+		login.VerifyLoginPage();
+	
+     }
+	
+}

@@ -1,0 +1,14 @@
+package Tests;
+
+import org.testng.annotations.Test;
+
+import pages.HomePage;
+
+public class HomeMenu {
+
+	@Test
+	public void testNavbars() {
+			Homepage homepage = new HomePage();
+		
+	}
+}

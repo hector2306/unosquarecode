@@ -1,0 +1,17 @@
+package Tests;
+
+import org.testng.annotations.Test;
+
+import Core.SetUp;
+import pages.HomePage;
+
+public class HomeMenu extends SetUp {
+
+	@Test
+	public void testNavbars() {
+		    
+			HomePage homepage = new HomePage(GetDriver());
+			homepage.clickMicrosoft365btn();
+		
+	}
+}

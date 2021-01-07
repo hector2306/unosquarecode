@@ -1,0 +1,50 @@
+package Tests;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.Test;
+
+import Core.SetUp;
+import pages.HomePage;
+
+public class HomeMenu extends SetUp {
+
+	@Test
+	public void testNavbars() throws InterruptedException {
+		    
+			HomePage homepage = new HomePage(GetDriver()); //1
+			//homepage.clickMicrosoft365btn();
+			homepage.allElementsPresent();//2
+			homepage.clickWindowsbtn();//3
+			homepage.clickwindows10btn();//4
+			homepage.printwindows10List();//5
+			
+			
+			//Thread.sleep(5000);
+		
+	}
+	
+	@Test
+	public void testSearch() throws InterruptedException  {
+		    
+			HomePage homepage = new HomePage(GetDriver()); //1
+			homepage.clickSearchButton();//6
+			homepage.search("Visual Studio");//7
+			homepage.printSoftwarePrices(3);//8
+			String price= homepage.GetSoftwarePriceByPosition(0).getText();//9
+			homepage.clickSoftware(0);//10
+			String detailsPrice = homepage.getDetailsPrice();
+			assertEquals(price, detailsPrice);//11
+			Thread.sleep(2000);//el pri robo mas
+			homepage.addSoftwareToCart();//12
+			String cartPrice = homepage.getCartPrice();
+			assertEquals(price, cartPrice);//13
+			homepage.selectCopies(20);
+			String totalPrice = homepage.getCartPrice();
+			Thread.sleep(10000);
+		
+	}
+	
+	
+	
+}

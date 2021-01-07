@@ -1,0 +1,40 @@
+package Core;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+
+public class SetUp {
+	
+	static WebDriver driver;
+	
+	@BeforeMethod
+	public static void DriverCreation() {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Hector Mares/eclipse-workspace/AutomationChanllengue/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.navigate().to(PropertyReader.getProperty("URL"););
+	
+	
+	}
+	
+	public static WebDriver GetDriver() {
+		return driver;
+	}
+	
+	@AfterTest
+	public void Closed() {
+		driver.quit();
+	}
+	
+	@AfterMethod
+	public void LastTest() {
+		driver.close();
+	}
+
+}

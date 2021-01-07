@@ -1,0 +1,47 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage extends BasePage {
+
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_0']")
+	private WebElement microsoft365btn;
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_1']")
+	private WebElement Officebtn;
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_2']")
+	private WebElement microsoft365btn;
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_3']")
+	private WebElement microsoft365btn;
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_4']")
+	private WebElement microsoft365btn;
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_5']")
+	private WebElement microsoft365btn;
+	
+	@FindBy(how=How.XPATH,using="//a[@id='shellmenu_6']")
+	private WebElement microsoft365btn;
+	
+	public HomePage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	public void clickMicrosoft365btn() {
+		clickElement(microsoft365btn);
+	}
+	
+	
+	
+	
+
+}

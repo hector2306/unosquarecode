@@ -1,0 +1,13 @@
+package Core;
+
+import org.openqa.selenium.WebDriver;
+
+public class Method {
+	
+	static WebDriver driver;
+	
+	public Method() {
+		driver = SetUp.GetDriver();
+	}
+
+}

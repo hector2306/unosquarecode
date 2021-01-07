@@ -1,0 +1,36 @@
+package Tests;
+
+import org.testng.annotations.Test;
+
+import Core.SetUp;
+import pages.HomePage;
+
+public class HomeMenu extends SetUp {
+
+	@Test
+	public void testNavbars() throws InterruptedException {
+		    
+			HomePage homepage = new HomePage(GetDriver()); //1
+			//homepage.clickMicrosoft365btn();
+			homepage.allElementsPresent();//2
+			homepage.clickWindowsbtn();//3
+			homepage.clickwindows10btn();//4
+			homepage.printwindows10List();//5
+			
+			
+			//Thread.sleep(5000);
+		
+	}
+	
+	@Test
+	public void testSearch()  {
+		    
+			HomePage homepage = new HomePage(GetDriver()); //1
+			homepage.clickSearchButton();//6
+			
+		
+	}
+	
+	
+	
+}

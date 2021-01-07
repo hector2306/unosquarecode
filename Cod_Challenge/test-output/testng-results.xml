@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-07T02:17:57 CST" name="Default suite" finished-at="2021-01-07T02:18:26 CST" duration-ms="29631">
+    <groups>
+    </groups>
+    <test started-at="2021-01-07T02:17:57 CST" name="Default test" finished-at="2021-01-07T02:18:26 CST" duration-ms="29631">
+      <class name="Tests.HomeMenu">
+        <test-method is-config="true" signature="DriverCreation()[pri:0, instance:Tests.HomeMenu@5f16132a]" started-at="2021-01-07T02:17:57 CST" name="DriverCreation" finished-at="2021-01-07T02:18:07 CST" duration-ms="10229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DriverCreation -->
+        <test-method signature="testSearch()[pri:0, instance:Tests.HomeMenu@5f16132a]" started-at="2021-01-07T02:18:07 CST" name="testSearch" finished-at="2021-01-07T02:18:26 CST" duration-ms="18422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method is-config="true" signature="LastTest()[pri:0, instance:Tests.HomeMenu@5f16132a]" started-at="2021-01-07T02:18:26 CST" name="LastTest" finished-at="2021-01-07T02:18:26 CST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LastTest -->
+        <test-method is-config="true" signature="Closed()[pri:0, instance:Tests.HomeMenu@5f16132a]" started-at="2021-01-07T02:18:26 CST" name="Closed" finished-at="2021-01-07T02:18:26 CST" duration-ms="649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Closed -->
+      </class> <!-- Tests.HomeMenu -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

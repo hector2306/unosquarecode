@@ -1,0 +1,12 @@
+package Tests;
+
+import org.testng.annotations.Test;
+
+public class HomeMenu {
+
+	@Test
+	public void testNavbars() {
+			Homepage homepage = new Homepage();
+		
+	}
+}
